@@ -13,7 +13,7 @@ def get_db():
         yield db
     finally:
         db.close()
-
+        
 @app.post("/todos/")
 def create_todo(todo: Todo, db: Session = Depends(get_db)):
     db.add(todo)

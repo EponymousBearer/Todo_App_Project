@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "postgres://default:2JlW0yZGDeNH@ep-winter-breeze-42857791.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:adnan6076@localhost:5432/todos"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
